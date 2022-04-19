@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -54,14 +54,12 @@ const arr = [
 
 const App = () => {
 
-  const [students, setStudents] = useState(arr);
-
   return (
     <Router>
       <Navbar />
       <Routes>
         <Route path='/home' element={<Home />}/>
-        <Route path='/students' element={<Students students={students}/>}/>
+        <Route path='/students' element={<Students students={arr}/>}/>
         <Route path='contact-us' element={<Contact />}/>
       </Routes>
     </Router>
