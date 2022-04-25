@@ -10,7 +10,6 @@ import Paper from '@mui/material/Paper';
 const Students = (props) => {
 
     const { students } = props;
-    // console.log(data);
 
     return (
         <div className='Students'>
@@ -32,7 +31,7 @@ const Students = (props) => {
                     <TableBody>
                     {students.map((student) => (
                         <TableRow
-                        key={student.name}
+                        key={student.id}
                         sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                             <TableCell component="th" scope="row">
